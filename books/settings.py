@@ -20,12 +20,14 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/5.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-qi^6)8ug(*@@vc@-y5dz1=x$^c@nel$z(%hnq%mwi2@&%(403f'
+SECRET_KEY = 'django-insecure-fw&(jv_la!+#**^yb!8f=o2p_xd!@*2thw%smy98136kgg8bny'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+# ALLOWED_HOSTS = []
+# add new settings here
+ALLOWED_HOSTS = ['localhost', '127.0.0.1', '.pythonanywhere.com']
 
 
 # Application definition
@@ -37,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'first_app',
 ]
 
 MIDDLEWARE = [
@@ -104,8 +107,10 @@ AUTH_PASSWORD_VALIDATORS = [
 # https://docs.djangoproject.com/en/5.1/topics/i18n/
 
 # LANGUAGE_CODE = 'en-us'
+LANGUAGES = [('en', 'English'), ('en-gb', 'English (Great Britain)')]
 
 # TIME_ZONE = 'UTC'
+TIME_ZONE ='Europe/London'
 
 USE_I18N = True
 
@@ -116,20 +121,9 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/5.1/howto/static-files/
 
 STATIC_URL = 'static/'
+STATIC_ROOT = BASE_DIR / 'static'
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
-
-
-# add new settings here
-STATIC_ROOT = BASE_DIR / 'static'
-ALLOWED_HOSTS = ['localhost', '127.0.0.1', '.pythonanywhere.com']
-
-LANGUAGE_CODE = 'en-gb'
-LANGUAGES = [('en', 'English'), ('en-gb', 'English (Great Britain)')]
-
-# TIME_ZONE = 'UTC'
-TIME_ZONE ='Europe/London'
-
