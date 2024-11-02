@@ -20,7 +20,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/5.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-+j(470w$0-1=1iva9p%x(cyjx=_bdfk!-qqtynelco@nv&0195'
+SECRET_KEY = 'django-insecure-!a)4_7n%xa_%wv5#pwb!+p(24q%b*=habe-!-ge$upaoo*9gjb'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -104,11 +104,8 @@ AUTH_PASSWORD_VALIDATORS = [
 # https://docs.djangoproject.com/en/5.1/topics/i18n/
 
 # LANGUAGE_CODE = 'en-us'
-LANGUAGE_CODE = 'en-gb'
-LANGUAGES = [('en', 'English'), ('en-gb', 'English (Great Britain)')]
 
 # TIME_ZONE = 'UTC'
-TIME_ZONE ='Europe/London'
 
 USE_I18N = True
 
@@ -125,7 +122,13 @@ STATIC_URL = 'static/'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
+
 # add new settings here
 STATIC_ROOT = BASE_DIR / 'static'
 ALLOWED_HOSTS = ['localhost', '127.0.0.1', '.pythonanywhere.com']
 
+LANGUAGE_CODE = 'en-gb'
+LANGUAGES = [('en', 'English'), ('en-gb', 'English (Great Britain)')]
+
+# TIME_ZONE = 'UTC'
+TIME_ZONE ='Europe/London'
